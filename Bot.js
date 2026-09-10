@@ -6,9 +6,10 @@ async function redeemDiamond(playerId, pinCode) {
 
     // บน Cloud Codespaces ต้องรันแบบ headless: true เท่านั้น
     const browser = await puppeteer.launch({
-        headless: true, 
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || null,
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
 
     const page = await browser.newPage();
 
