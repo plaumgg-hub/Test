@@ -1,0 +1,11 @@
+{
+  "name": "freefire-bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}
